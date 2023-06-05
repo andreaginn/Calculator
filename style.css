@@ -1,31 +1,38 @@
+
+@font-face {
+    font-family: "Great Notes";
+    src: url(GreatNotes.otf);
+}
+
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: normal;
+    font-family: "Great Notes"
 }
 
 body {
-    margin: 0;
     padding: 0;
-    background: linear-gradient(to right, pink, lightblue);
+    margin: 0;
+    background: linear-gradient(to right, rgb(238, 116, 136), rgb(111, 205, 236));
 }
 
 .calculator-grid {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     grid-row-gap: 0;
+    padding: 0;
 }
 
 .calculator-grid>button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid rgb(213, 232, 202);
     outline: none;
     background-color: rgba(255, 255, 255, 0.393);
     padding: 0;
@@ -33,7 +40,7 @@ body {
 }
 
 .calculator-grid>button:hover {
-    background-color: rgb(255, 255, 255)
+    background-color: rgb(213, 232, 202);
 }
 
 .span-2 {
@@ -48,7 +55,7 @@ body {
     align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
-    padding: 10vh;
+    padding: 10px;
     /*below: if results too large, auto-fits characters to container*/
     word-wrap: break-word;
     word-break: break-all;
@@ -62,4 +69,11 @@ body {
 .output .current-operand {
     color: white;
     font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: -70px;
+
 }
